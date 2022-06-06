@@ -12,6 +12,8 @@ A través del blog se puede:
 -Navegar por un inicio con todos los posts ordenados de menos a más recientes.
 -Navegar por las distintas categorías desde el menu desplegable en la navbar.
 -Editar los posts.
+-Ver el post en su completitud si queremos leer más.
+-Elegir el estilo de texto que más nos guste. (CK editor)
 -Cargar una imágen con el post.
 -Borrar los posts.
 -Mandar mensajes a un usuario cuyo chat estaba inicializado, que los recibirá instantaneamente.
