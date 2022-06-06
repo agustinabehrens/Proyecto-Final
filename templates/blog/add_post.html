@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+<br/><br/><br/><br/><br/><br/>
+<h2> Nuevo Post: ¿Qué estás pensando? </h2>
+<br/><br/>
+
+
+<form action="{% url 'blog:add_post' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+        {{ formulario.media }}
+        {{ formulario.as_p }}
+    
+    
+   
+    <input type="submit", value="Enviar">
+
+</form>
+
+<a class="text-muted small mb-4 mb-lg-0">Dinos que piensas, {{user.username}}!</a>  <img height="80px" src=" {{ url }} ">
+
+    {% endblock content %}

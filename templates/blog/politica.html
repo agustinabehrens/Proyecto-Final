@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{{ mensaje }}
+<br/> <br/> <br/>
+
+{% block content %}
+
+<br/> <br/> <br/> <br/> <h2>Política</h2><br/> <br/> <br/>
+{% for post in posts %}
+
+<h2>{{ post.title }}</h2> <img src="{{ post.image.url }}" width="200" height="150">
+<h5>Escrito por: {{ post.author }}, {{ post.published }} </h5> 
+<button>
+    <a href="{% url 'blog:edit_post' post.id %}"> Editar</a>
+</button>
+<br/>
+<button>
+<a href="{% url 'blog:delete_post' post.id %}"> Borrar</a> 
+</button>
+<h5>{{ post.text }}</h5>
+{% endfor %}
+
+
+{% endblock content %}

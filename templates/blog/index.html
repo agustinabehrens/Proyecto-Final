@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %} Blogged {% endblock title %}
+{% block content %}
+{% load static %}
+<br/><br/>
+<br/><br/>
+<br/>{{ mensaje }} <br/>
+
+<img height="80px" src="{{ url }}">
+<br/>
+<h1>Lo más reciente:</h1> <img src="{% static 'Blog/assets/images/mundito.jpg' %}" height="100px"> 
+    {% for p in posts %}
+        <br/>
+        <br/>
+        <br/>
+        <h2>{{ p.title | safe }}</h2>
+        <br/>
+        <h4>Tema: {{ p.category }}</h4>
+        
+        <a href="{% url 'blog:post-detail' p.id %}"> Ver Post Completo </a>
+
+        <h5>Escrito por: {{ p.author }}, {{ p.published }} </h5> 
+        <button>
+            <a href="{% url 'blog:edit_post' p.id %}"> Editar</a>
+        </button>
+        <br/>
+        <button>
+        <a href="{% url 'blog:delete_post' p.id %}"> Borrar</a> 
+        </button>
+        <br/>
+        <br/>
+        <img src="{{ p.image.url }}" width="200" height="150">
+
+        <br/>
+
+
+    
+    
+    </a>
+    {% endfor %}
+
+ {% endblock content %}

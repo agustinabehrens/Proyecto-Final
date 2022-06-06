@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br/> <br/> <br/> <br/> <br/> <br/> <br/>
+<h3>Cargar nuevo avatar de {{ user.username }}</h3>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ miformulario.as_p }}
+<br>
+    <input type="submit" value="Actualizar">
+
+</form>
+
+{% endblock content %}

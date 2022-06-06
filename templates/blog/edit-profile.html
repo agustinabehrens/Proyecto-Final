@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<h2>Editar mi perfil: </h2>
+<br/><br/>
+<form action="" method ="POST"> {% csrf_token %}
+
+    {{ formulario.as_p }}
+
+    <input type="submit" value="Guardar cambios.">
+
+</form>
+
+{% endblock content %}

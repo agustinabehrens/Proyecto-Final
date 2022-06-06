@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<br/><br/><br/><br/><br/>
+<h2>{{ post.title  | safe }}</h2>
+<h3>{{ post.subtitle | safe }} </h3>
+
+<h4>Categoría: {{ post.category }} </h4>
+
+<h5>Publicado por {{ post.author}}, {{ post.published }} </h5>
+<br/>
+
+
+<p>{{ post.text | safe }} </p>
+<img src="{{ post.image.url }}" width="400" height="300"/>
+{% endblock content %}
+
+

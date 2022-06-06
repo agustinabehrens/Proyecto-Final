@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %} Blogged {% endblock title %}
+{% block content %}
+<!-- Header -->
+<header id="head">
+    <div class="container">
+        <div class="row">
+            <h1 class="lead">BLOGGED</h1>
+            <p class="tagline">Todo lo que te interesa, aquí, en un mismo blog.</p>
+            <p><a class="btn btn-default btn-lg" role="button" href="{% url 'blog:home' %}">VER POSTS RECIENTES</a> 
+            <p><a class="btn btn-default btn-lg" role="button" href="{% url 'chat:mensajes' %}">IR AL CHAT</a> 
+        </div>
+    </div>
+</header>
+<a href="{% url 'home' %}">
+</a>
+
+{% endblock content %}
